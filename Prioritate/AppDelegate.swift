@@ -16,6 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        setUpParse(application, launchOptions: launchOptions)
+        
         return true
     }
 
@@ -41,6 +44,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    //MARK: - Methods
+    func setUpParse(application: UIApplication, launchOptions: [NSObject: AnyObject]?){
+        
+        Parse.enableLocalDatastore()
+        
+        Parse.setApplicationId(Keys.ParseApplicationId,
+            clientKey: Keys.ParseClientKey)
+        
+        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
+    }
 }
 
