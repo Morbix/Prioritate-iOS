@@ -14,6 +14,8 @@
 		A7D7946D1AF5892700AE7D87 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D7946C1AF5892700AE7D87 /* Images.xcassets */; };
 		A7D7947C1AF5892700AE7D87 /* PrioritateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D7947B1AF5892700AE7D87 /* PrioritateTests.swift */; };
 		A7D794861AF58BF600AE7D87 /* PrioritateKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D794851AF58BF600AE7D87 /* PrioritateKeys.swift */; };
+		A7D7948C1AF5A75D00AE7D87 /* PFItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D7948B1AF5A75D00AE7D87 /* PFItem.swift */; };
+		A7D7948F1AF5AF8700AE7D87 /* PFItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D7948B1AF5A75D00AE7D87 /* PFItem.swift */; };
 		F342267FBE2D9742284A5EC9 /* libPods-PrioritateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C0AFEE64ED463E745BF62 /* libPods-PrioritateTests.a */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,7 @@
 		A7D7947B1AF5892700AE7D87 /* PrioritateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritateTests.swift; sourceTree = "<group>"; };
 		A7D794851AF58BF600AE7D87 /* PrioritateKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrioritateKeys.swift; path = "../../../../Dropbox/_____keys/PrioritateKeys.swift"; sourceTree = "<group>"; };
 		A7D794871AF596AA00AE7D87 /* Prioritate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prioritate-Bridging-Header.h"; sourceTree = "<group>"; };
+		A7D7948B1AF5A75D00AE7D87 /* PFItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,7 @@
 				A7D794651AF5892700AE7D87 /* AppDelegate.swift */,
 				A7D794691AF5892700AE7D87 /* Main.storyboard */,
 				A7D7946C1AF5892700AE7D87 /* Images.xcassets */,
+				A7D7948D1AF5A79E00AE7D87 /* Models */,
 				A7D7948A1AF59A9D00AE7D87 /* Controllers */,
 				A7D794631AF5892700AE7D87 /* Supporting Files */,
 			);
@@ -152,6 +156,14 @@
 				A7D794671AF5892700AE7D87 /* ViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A7D7948D1AF5A79E00AE7D87 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A7D7948B1AF5A75D00AE7D87 /* PFItem.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D7948C1AF5A75D00AE7D87 /* PFItem.swift in Sources */,
 				A7D794681AF5892700AE7D87 /* ViewController.swift in Sources */,
 				A7D794661AF5892700AE7D87 /* AppDelegate.swift in Sources */,
 				A7D794861AF58BF600AE7D87 /* PrioritateKeys.swift in Sources */,
@@ -330,6 +343,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7D7948F1AF5AF8700AE7D87 /* PFItem.swift in Sources */,
 				A7D7947C1AF5892700AE7D87 /* PrioritateTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +498,7 @@
 				INFOPLIST_FILE = PrioritateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Prioritate/Prioritate-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prioritate.app/Prioritate";
 			};
 			name = Debug;
@@ -500,6 +515,7 @@
 				INFOPLIST_FILE = PrioritateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Prioritate/Prioritate-Bridging-Header.h";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Prioritate.app/Prioritate";
 			};
 			name = Release;
