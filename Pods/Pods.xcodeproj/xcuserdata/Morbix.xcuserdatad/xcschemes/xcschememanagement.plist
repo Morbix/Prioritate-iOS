@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Prioritate-LDProgressView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Prioritate-Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +25,11 @@
 			<false/>
 		</dict>
 		<key>Pods-PrioritateTests-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PrioritateTests-LDProgressView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -37,32 +47,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>57EEDCD19CE571A7334B49DC</key>
+		<key>07EE2C9FE55DFC2EADD726EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A08E9E22E675B6FBCFE4134A</key>
+		<key>10D541365F7194BFBE98964D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AEC716D6DEFB29A7BCF51969</key>
+		<key>131C5E036B8A5CCEF833BF65</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5C0885654BE10766809A608</key>
+		<key>20DCB010EF18B959C34EB5A1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D31316EAF2C1594266ECA179</key>
+		<key>9A8833E3FD7DFEB2C9C3709E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED050CD1B303CC8D8820B741</key>
+		<key>9C13F5ABB45D0C627E9114A2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F17BFC37ED80DA3F7B2219FE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FA500BB2F8332D4DDE93E40A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

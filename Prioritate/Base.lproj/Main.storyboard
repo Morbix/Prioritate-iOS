@@ -36,25 +36,26 @@
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wx6-Yu-ZkT">
-                                                    <rect key="frame" x="15" y="39" width="290" height="16"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGX-bv-IAP" customClass="LDProgressView">
+                                                    <rect key="frame" x="15" y="37" width="290" height="18"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="16" id="4Vo-yB-dMH"/>
+                                                        <constraint firstAttribute="height" constant="18" id="l7G-du-ho9"/>
                                                     </constraints>
-                                                </progressView>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="Wx6-Yu-ZkT" secondAttribute="trailing" constant="15" id="1yN-vi-2mB"/>
                                                 <constraint firstItem="rxT-gh-9Oj" firstAttribute="leading" secondItem="LAS-AY-vqv" secondAttribute="leading" constant="15" id="DXy-el-bbx"/>
-                                                <constraint firstItem="Wx6-Yu-ZkT" firstAttribute="top" secondItem="rxT-gh-9Oj" secondAttribute="bottom" constant="10" id="NHs-9d-UcC"/>
+                                                <constraint firstItem="aGX-bv-IAP" firstAttribute="leading" secondItem="LAS-AY-vqv" secondAttribute="leading" constant="15" id="QxM-mB-PBP"/>
                                                 <constraint firstAttribute="trailing" secondItem="rxT-gh-9Oj" secondAttribute="trailing" constant="15" id="WjA-O3-ZAF"/>
                                                 <constraint firstItem="rxT-gh-9Oj" firstAttribute="top" secondItem="LAS-AY-vqv" secondAttribute="top" constant="8" id="ab0-uX-1Vv"/>
-                                                <constraint firstItem="Wx6-Yu-ZkT" firstAttribute="leading" secondItem="LAS-AY-vqv" secondAttribute="leading" constant="15" id="iyD-Pc-MGI"/>
+                                                <constraint firstItem="aGX-bv-IAP" firstAttribute="top" secondItem="rxT-gh-9Oj" secondAttribute="bottom" constant="8" id="bmX-z2-PaV"/>
+                                                <constraint firstAttribute="trailing" secondItem="aGX-bv-IAP" secondAttribute="trailing" constant="15" id="oPp-Cg-n5A"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labelDisplayName" destination="rxT-gh-9Oj" id="Dyn-F4-ycl"/>
-                                            <outlet property="progressItem" destination="Wx6-Yu-ZkT" id="8f7-SA-veK"/>
+                                            <outlet property="progressItem" destination="aGX-bv-IAP" id="LUy-n0-lJP"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

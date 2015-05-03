@@ -11,12 +11,12 @@ import UIKit
 class PRCellItem: UITableViewCell, MXCellProtocol {
     
     @IBOutlet var labelDisplayName: UILabel!
-    @IBOutlet var progressItem: UIProgressView!
+    @IBOutlet var progressItem: LDProgressView!
     
     func mx_configureCell(object: AnyObject?, target: AnyObject?, indexPath: NSIndexPath?) {
         if let item = object as? PFItem {
             self.labelDisplayName.text = item.getDisplayName()
-            self.progressItem.progress = item.progress
+            self.progressItem.progress = CGFloat(item.progress)
         }else{
             self.labelDisplayName.text = "N/A"
             self.progressItem.progress = 0.0

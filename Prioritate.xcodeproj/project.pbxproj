@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0697F19FD32EA5EE5349FF74 /* libPods-Prioritate.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C74D7AF4A91D9D9D491730C /* libPods-Prioritate.a */; };
+		A7CF81751AF635B200225BD8 /* PRDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF81741AF635B200225BD8 /* PRDataManager.swift */; };
 		A7D794661AF5892700AE7D87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D794651AF5892700AE7D87 /* AppDelegate.swift */; };
 		A7D794681AF5892700AE7D87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D794671AF5892700AE7D87 /* ViewController.swift */; };
 		A7D7946B1AF5892700AE7D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D794691AF5892700AE7D87 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 		67D079BADE659130AA7C98C3 /* Pods-Prioritate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Prioritate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Prioritate/Pods-Prioritate.release.xcconfig"; sourceTree = "<group>"; };
 		8C74D7AF4A91D9D9D491730C /* libPods-Prioritate.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Prioritate.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		983C0AFEE64ED463E745BF62 /* libPods-PrioritateTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PrioritateTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7CF81741AF635B200225BD8 /* PRDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRDataManager.swift; sourceTree = "<group>"; };
 		A7D794601AF5892700AE7D87 /* Prioritate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prioritate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D794641AF5892700AE7D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D794651AF5892700AE7D87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A7CF81731AF634C800225BD8 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A7CF81741AF635B200225BD8 /* PRDataManager.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		A7D794571AF5892600AE7D87 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +130,7 @@
 				A7D794651AF5892700AE7D87 /* AppDelegate.swift */,
 				A7D794691AF5892700AE7D87 /* Main.storyboard */,
 				A7D7946C1AF5892700AE7D87 /* Images.xcassets */,
+				A7CF81731AF634C800225BD8 /* Classes */,
 				A7D794971AF5BF2D00AE7D87 /* Custom Views */,
 				A7D794961AF5BF2800AE7D87 /* Custom Cells */,
 				A7D794931AF5BE8A00AE7D87 /* Protocols */,
@@ -368,6 +379,7 @@
 				A7D794661AF5892700AE7D87 /* AppDelegate.swift in Sources */,
 				A7D794951AF5BEAF00AE7D87 /* PRCellItem.swift in Sources */,
 				A7D794861AF58BF600AE7D87 /* PrioritateKeys.swift in Sources */,
+				A7CF81751AF635B200225BD8 /* PRDataManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

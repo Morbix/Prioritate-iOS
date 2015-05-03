@@ -12,11 +12,16 @@ let CELL_ITEM = "PRCellItem"
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var itensArray: [PFItem] = []
+    
     @IBOutlet var table: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        PRDataManager.sharedInstance.createFakeData()
+        self.reloadAllData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,9 +29,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: - Methods
+    func reloadAllData() {
+        itensArray = []
+        itensArray += PRDataManager.sharedInstance.itensArray
+        table.reloadData()
+    }
+    
     //MARK: - UITableViewDelegate and UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return itensArray.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -34,6 +46,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var identifier: String = CELL_ITEM
         var object: AnyObject?
         
+        object = itensArray[indexPath.row]
         
         var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(identifier,
             forIndexPath: indexPath) as! UITableViewCell

@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Bolts_Tasks 1
 #define COCOAPODS_VERSION_PATCH_Bolts_Tasks 5
 
+// LDProgressView
+#define COCOAPODS_POD_AVAILABLE_LDProgressView
+#define COCOAPODS_VERSION_MAJOR_LDProgressView 1
+#define COCOAPODS_VERSION_MINOR_LDProgressView 2
+#define COCOAPODS_VERSION_PATCH_LDProgressView 1
+
 // Parse
 #define COCOAPODS_POD_AVAILABLE_Parse
 // This library does not follow semantic-versioning,

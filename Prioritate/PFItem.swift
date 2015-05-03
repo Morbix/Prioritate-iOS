@@ -40,8 +40,16 @@ class PFItem: PFObject, PFSubclassing {
         self.progress = 0.0
     }
     
+    convenience init(name: String, progress: Float) {
+        self.init()
+        self.name = name
+        self.isCompleted = false
+        self.isBought = false
+        self.progress = progress
+    }
+    
     override var description: String {
-        var percent: String = NSString(format: "%.2f", self.progress) as String
+        var percent: String = NSString(format: "%.2f", self.progress*100) as String
         return self.name + " ("+percent+"%)"
     }
     

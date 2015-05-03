@@ -41,6 +41,14 @@ class PrioritateTests: XCTestCase {
         XCTAssert(expected == item.description, "Item \(item.description) deveria ter a descrição: \(expected)")
     }
     
+    func testCreatingItemDescriptionWithProgress (){
+        var item: PFItem = PFItem(name: "Test A", progress: 0.5)
+        
+        let expected: String = "Test A (50.00%)"
+        
+        XCTAssert(expected == item.description, "Item \(item.description) deveria ter a descrição: \(expected)")
+    }
+    
     func testCreatingItemDislayName (){
         var item: PFItem = PFItem(name: "Test A")
         
