@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-Prioritate-ASValueTrackingSlider.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Prioritate-Bolts.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,6 +25,11 @@
 			<false/>
 		</dict>
 		<key>Pods-Prioritate.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PrioritateTests-ASValueTrackingSlider.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -47,42 +57,52 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07EE2C9FE55DFC2EADD726EA</key>
+		<key>04AF24C9583C4B77C66C9D5F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>10D541365F7194BFBE98964D</key>
+		<key>1D23D61848BA650B601B63D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>131C5E036B8A5CCEF833BF65</key>
+		<key>333FB7C781270118B41F87CB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>20DCB010EF18B959C34EB5A1</key>
+		<key>37F40B4EA3E6839C4209A367</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9A8833E3FD7DFEB2C9C3709E</key>
+		<key>4DCFA05D9176C83CF21020AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9C13F5ABB45D0C627E9114A2</key>
+		<key>6A69AD0E38165726BE0DA0AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F17BFC37ED80DA3F7B2219FE</key>
+		<key>ACBB4D8C96E57A5E1139CC3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FA500BB2F8332D4DDE93E40A</key>
+		<key>B5C0FB51CB91D787DB057370</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7ABA765B155DE1DDC223ED9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB902192C157298D42CA9038</key>
 		<dict>
 			<key>primary</key>
 			<true/>
