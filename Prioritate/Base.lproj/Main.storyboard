@@ -180,7 +180,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="lbD-gv-e9B">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="c8D-05-ynR" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="c8D-05-ynR" customClass="PRTabBarController" customModule="Prioritate" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="kKH-m3-rBP">

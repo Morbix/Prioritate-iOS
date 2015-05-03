@@ -17,7 +17,7 @@ class PRDashboardViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+                
         PRDataManager.sharedInstance.createFakeData()
         self.reloadAllData()
     }

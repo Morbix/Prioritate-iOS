@@ -13,6 +13,7 @@
 		A7CF81791AF6CF9C00225BD8 /* PRDashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF81781AF6CF9C00225BD8 /* PRDashboardViewController.swift */; };
 		A7CF817B1AF6D03400225BD8 /* PREditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF817A1AF6D03400225BD8 /* PREditorViewController.swift */; };
 		A7CF817D1AF6D57700225BD8 /* PRConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF817C1AF6D57700225BD8 /* PRConstants.swift */; };
+		A7CF817F1AF6DC6C00225BD8 /* PRTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF817E1AF6DC6C00225BD8 /* PRTabBarController.swift */; };
 		A7D794661AF5892700AE7D87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D794651AF5892700AE7D87 /* AppDelegate.swift */; };
 		A7D7946B1AF5892700AE7D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D794691AF5892700AE7D87 /* Main.storyboard */; };
 		A7D7946D1AF5892700AE7D87 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D7946C1AF5892700AE7D87 /* Images.xcassets */; };
@@ -47,6 +48,7 @@
 		A7CF81781AF6CF9C00225BD8 /* PRDashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRDashboardViewController.swift; sourceTree = "<group>"; };
 		A7CF817A1AF6D03400225BD8 /* PREditorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PREditorViewController.swift; sourceTree = "<group>"; };
 		A7CF817C1AF6D57700225BD8 /* PRConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRConstants.swift; sourceTree = "<group>"; };
+		A7CF817E1AF6DC6C00225BD8 /* PRTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRTabBarController.swift; sourceTree = "<group>"; };
 		A7D794601AF5892700AE7D87 /* Prioritate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prioritate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D794641AF5892700AE7D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D794651AF5892700AE7D87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -180,6 +182,7 @@
 			children = (
 				A7CF81781AF6CF9C00225BD8 /* PRDashboardViewController.swift */,
 				A7CF817A1AF6D03400225BD8 /* PREditorViewController.swift */,
+				A7CF817E1AF6DC6C00225BD8 /* PRTabBarController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7CF817F1AF6DC6C00225BD8 /* PRTabBarController.swift in Sources */,
 				A7D7948C1AF5A75D00AE7D87 /* PFItem.swift in Sources */,
 				A7CF817B1AF6D03400225BD8 /* PREditorViewController.swift in Sources */,
 				A7CF81791AF6CF9C00225BD8 /* PRDashboardViewController.swift in Sources */,
