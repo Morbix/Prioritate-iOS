@@ -5,3 +5,4 @@
 #import <Parse/Parse.h>
 #import <Parse/PFObject+Subclass.h>
 #import <LDProgressView/LDProgressView.h>
+#import <ASValueTrackingSlider/ASValueTrackingSlider.h>

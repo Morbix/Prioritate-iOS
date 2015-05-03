@@ -1,34 +1,33 @@
 //
-//  ViewController.swift
+//  PREditorViewController.swift
 //  Prioritate
 //
-//  Created by Henrique Morbin on 02/05/15.
+//  Created by Henrique Morbin on 03/05/15.
 //  Copyright (c) 2015 Morbix. All rights reserved.
 //
 
 import UIKit
 
-let CELL_ITEM = "PRCellItem"
+let CELL_ITEM_EDITOR = "PRCellItemEditor"
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PREditorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var itensArray: [PFItem] = []
     
     @IBOutlet var table: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        PRDataManager.sharedInstance.createFakeData()
         self.reloadAllData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     //MARK: - Methods
     func reloadAllData() {
         itensArray = []
@@ -42,8 +41,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-        var identifier: String = CELL_ITEM
+        
+        var identifier: String = CELL_ITEM_EDITOR
         var object: AnyObject?
         
         object = itensArray[indexPath.row]
@@ -61,6 +60,4 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 64
     }
-
 }
-
