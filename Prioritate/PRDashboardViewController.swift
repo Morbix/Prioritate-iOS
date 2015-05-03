@@ -8,8 +8,6 @@
 
 import UIKit
 
-let CELL_ITEM = "PRCellItem"
-
 class PRDashboardViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var itensArray: [PFItem] = []

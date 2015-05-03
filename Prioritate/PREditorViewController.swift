@@ -8,7 +8,6 @@
 
 import UIKit
 
-let CELL_ITEM_EDITOR = "PRCellItemEditor"
 
 class PREditorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
