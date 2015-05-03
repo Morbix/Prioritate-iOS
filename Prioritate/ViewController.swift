@@ -8,6 +8,8 @@
 
 import UIKit
 
+let CELL_ITEM = "PRCellItem"
+
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var table: UITableView!
@@ -28,18 +30,23 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+
+        var identifier: String = CELL_ITEM
+        var object: AnyObject?
         
-        var identifier: String
-        var object: AnyObject
-        
-        identifier = "Cell"
         
         var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(identifier,
             forIndexPath: indexPath) as! UITableViewCell
         
-        cell.textLabel?.text = "Section \(indexPath.section) Cell \(indexPath.row)"
+        if let cellProtocol = cell as? MXCellProtocol{
+            cellProtocol.mx_configureCell(object, target: self, indexPath: indexPath)
+        }
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 64
     }
 
 }

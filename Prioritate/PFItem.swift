@@ -13,7 +13,7 @@ class PFItem: PFObject, PFSubclassing {
     dynamic var name: String = ""
     dynamic var isCompleted: Bool = false
     dynamic var isBought: Bool = false
-    dynamic var progress: Double = 0.0
+    dynamic var progress: Float = 0.0
     
     override class func initialize() {
         struct Static {

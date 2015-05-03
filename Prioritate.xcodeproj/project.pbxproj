@@ -16,6 +16,8 @@
 		A7D794861AF58BF600AE7D87 /* PrioritateKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D794851AF58BF600AE7D87 /* PrioritateKeys.swift */; };
 		A7D7948C1AF5A75D00AE7D87 /* PFItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D7948B1AF5A75D00AE7D87 /* PFItem.swift */; };
 		A7D7948F1AF5AF8700AE7D87 /* PFItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D7948B1AF5A75D00AE7D87 /* PFItem.swift */; };
+		A7D794921AF5BD8100AE7D87 /* MXCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D794911AF5BD8100AE7D87 /* MXCellProtocol.swift */; };
+		A7D794951AF5BEAF00AE7D87 /* PRCellItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D794941AF5BEAF00AE7D87 /* PRCellItem.swift */; };
 		F342267FBE2D9742284A5EC9 /* libPods-PrioritateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C0AFEE64ED463E745BF62 /* libPods-PrioritateTests.a */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		A7D794851AF58BF600AE7D87 /* PrioritateKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrioritateKeys.swift; path = "../../../../Dropbox/_____keys/PrioritateKeys.swift"; sourceTree = "<group>"; };
 		A7D794871AF596AA00AE7D87 /* Prioritate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Prioritate-Bridging-Header.h"; sourceTree = "<group>"; };
 		A7D7948B1AF5A75D00AE7D87 /* PFItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PFItem.swift; sourceTree = "<group>"; };
+		A7D794911AF5BD8100AE7D87 /* MXCellProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MXCellProtocol.swift; sourceTree = "<group>"; };
+		A7D794941AF5BEAF00AE7D87 /* PRCellItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRCellItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,9 @@
 				A7D794651AF5892700AE7D87 /* AppDelegate.swift */,
 				A7D794691AF5892700AE7D87 /* Main.storyboard */,
 				A7D7946C1AF5892700AE7D87 /* Images.xcassets */,
+				A7D794971AF5BF2D00AE7D87 /* Custom Views */,
+				A7D794961AF5BF2800AE7D87 /* Custom Cells */,
+				A7D794931AF5BE8A00AE7D87 /* Protocols */,
 				A7D7948D1AF5A79E00AE7D87 /* Models */,
 				A7D7948A1AF59A9D00AE7D87 /* Controllers */,
 				A7D794631AF5892700AE7D87 /* Supporting Files */,
@@ -164,6 +171,29 @@
 				A7D7948B1AF5A75D00AE7D87 /* PFItem.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		A7D794931AF5BE8A00AE7D87 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A7D794911AF5BD8100AE7D87 /* MXCellProtocol.swift */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+		A7D794961AF5BF2800AE7D87 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A7D794941AF5BEAF00AE7D87 /* PRCellItem.swift */,
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		A7D794971AF5BF2D00AE7D87 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Custom Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +364,9 @@
 			files = (
 				A7D7948C1AF5A75D00AE7D87 /* PFItem.swift in Sources */,
 				A7D794681AF5892700AE7D87 /* ViewController.swift in Sources */,
+				A7D794921AF5BD8100AE7D87 /* MXCellProtocol.swift in Sources */,
 				A7D794661AF5892700AE7D87 /* AppDelegate.swift in Sources */,
+				A7D794951AF5BEAF00AE7D87 /* PRCellItem.swift in Sources */,
 				A7D794861AF58BF600AE7D87 /* PrioritateKeys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

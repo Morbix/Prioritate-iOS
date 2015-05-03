@@ -21,20 +21,41 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="d6C-JK-6P5" style="IBUITableViewCellStyleDefault" id="I0g-78-dPz">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PRCellItem" rowHeight="64" id="I0g-78-dPz" customClass="PRCellItem" customModule="Prioritate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I0g-78-dPz" id="LAS-AY-vqv">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d6C-JK-6P5">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="290" translatesAutoresizingMaskIntoConstraints="NO" id="rxT-gh-9Oj">
+                                                    <rect key="frame" x="15" y="8" width="290" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="XeL-OK-iH8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Wx6-Yu-ZkT">
+                                                    <rect key="frame" x="15" y="39" width="290" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="16" id="4Vo-yB-dMH"/>
+                                                    </constraints>
+                                                </progressView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="Wx6-Yu-ZkT" secondAttribute="trailing" constant="15" id="1yN-vi-2mB"/>
+                                                <constraint firstItem="rxT-gh-9Oj" firstAttribute="leading" secondItem="LAS-AY-vqv" secondAttribute="leading" constant="15" id="DXy-el-bbx"/>
+                                                <constraint firstItem="Wx6-Yu-ZkT" firstAttribute="top" secondItem="rxT-gh-9Oj" secondAttribute="bottom" constant="10" id="NHs-9d-UcC"/>
+                                                <constraint firstAttribute="trailing" secondItem="rxT-gh-9Oj" secondAttribute="trailing" constant="15" id="WjA-O3-ZAF"/>
+                                                <constraint firstItem="rxT-gh-9Oj" firstAttribute="top" secondItem="LAS-AY-vqv" secondAttribute="top" constant="8" id="ab0-uX-1Vv"/>
+                                                <constraint firstItem="Wx6-Yu-ZkT" firstAttribute="leading" secondItem="LAS-AY-vqv" secondAttribute="leading" constant="15" id="iyD-Pc-MGI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelDisplayName" destination="rxT-gh-9Oj" id="Dyn-F4-ycl"/>
+                                            <outlet property="progressItem" destination="Wx6-Yu-ZkT" id="8f7-SA-veK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
