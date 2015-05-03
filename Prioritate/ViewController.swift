@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet var table: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +22,25 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: - UITableViewDelegate and UITableViewDataSource
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10;
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        var identifier: String
+        var object: AnyObject
+        
+        identifier = "Cell"
+        
+        var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(identifier,
+            forIndexPath: indexPath) as! UITableViewCell
+        
+        cell.textLabel?.text = "Section \(indexPath.section) Cell \(indexPath.row)"
+        
+        return cell
+    }
 
 }
 

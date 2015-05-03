@@ -12,7 +12,6 @@
 		A7D794681AF5892700AE7D87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D794671AF5892700AE7D87 /* ViewController.swift */; };
 		A7D7946B1AF5892700AE7D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D794691AF5892700AE7D87 /* Main.storyboard */; };
 		A7D7946D1AF5892700AE7D87 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D7946C1AF5892700AE7D87 /* Images.xcassets */; };
-		A7D794701AF5892700AE7D87 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A7D7946E1AF5892700AE7D87 /* LaunchScreen.xib */; };
 		A7D7947C1AF5892700AE7D87 /* PrioritateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D7947B1AF5892700AE7D87 /* PrioritateTests.swift */; };
 		A7D794861AF58BF600AE7D87 /* PrioritateKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D794851AF58BF600AE7D87 /* PrioritateKeys.swift */; };
 		F342267FBE2D9742284A5EC9 /* libPods-PrioritateTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 983C0AFEE64ED463E745BF62 /* libPods-PrioritateTests.a */; };
@@ -41,7 +40,6 @@
 		A7D794671AF5892700AE7D87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A7D7946A1AF5892700AE7D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A7D7946C1AF5892700AE7D87 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A7D7946F1AF5892700AE7D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A7D794751AF5892700AE7D87 /* PrioritateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PrioritateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D7947A1AF5892700AE7D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D7947B1AF5892700AE7D87 /* PrioritateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioritateTests.swift; sourceTree = "<group>"; };
@@ -113,10 +111,9 @@
 			isa = PBXGroup;
 			children = (
 				A7D794651AF5892700AE7D87 /* AppDelegate.swift */,
-				A7D794671AF5892700AE7D87 /* ViewController.swift */,
 				A7D794691AF5892700AE7D87 /* Main.storyboard */,
 				A7D7946C1AF5892700AE7D87 /* Images.xcassets */,
-				A7D7946E1AF5892700AE7D87 /* LaunchScreen.xib */,
+				A7D7948A1AF59A9D00AE7D87 /* Controllers */,
 				A7D794631AF5892700AE7D87 /* Supporting Files */,
 			);
 			path = Prioritate;
@@ -147,6 +144,14 @@
 				A7D7947A1AF5892700AE7D87 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A7D7948A1AF59A9D00AE7D87 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A7D794671AF5892700AE7D87 /* ViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +239,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D7946B1AF5892700AE7D87 /* Main.storyboard in Resources */,
-				A7D794701AF5892700AE7D87 /* LaunchScreen.xib in Resources */,
 				A7D7946D1AF5892700AE7D87 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,14 +351,6 @@
 				A7D7946A1AF5892700AE7D87 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A7D7946E1AF5892700AE7D87 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A7D7946F1AF5892700AE7D87 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
