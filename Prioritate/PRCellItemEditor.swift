@@ -8,11 +8,22 @@
 
 import UIKit
 
-class PRCellItemEditor: UITableViewCell, MXCellProtocol {
+class PRCellItemEditor: UITableViewCell, MXCellProtocol, ASValueTrackingSliderDelegate {
+    @IBOutlet var labelDisplayName: UILabel!
+    @IBOutlet var slideItem: ASValueTrackingSlider!
+    
+    override func awakeFromNib() {
+        self.slideItem.delegate = self;
+    }
 
     func mx_configureCell(object: AnyObject?, target: AnyObject?, indexPath: NSIndexPath?) {
         if let item = object as? PFItem {
-            self.textLabel?.text = item.getDisplayName()
+            self.labelDisplayName?.text = item.getDisplayName()
         }
+    }
+    
+    //MARK: - ASValueTrackingSliderDelegate
+    func sliderWillDisplayPopUpView(slider: ASValueTrackingSlider!) {
+        self.superview?.bringSubviewToFront(self)
     }
 }

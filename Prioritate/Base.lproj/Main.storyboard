@@ -94,16 +94,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TUf-zs-R55">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="75" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="TUf-zs-R55">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PRCellItemEditor" id="cLq-C4-pG6" customClass="PRCellItemEditor" customModule="Prioritate" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PRCellItemEditor" rowHeight="80" id="cLq-C4-pG6" customClass="PRCellItemEditor" customModule="Prioritate" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cLq-C4-pG6" id="IdP-GY-ZJ1">
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aAp-5j-ckM">
+                                                    <rect key="frame" x="15" y="12" width="290" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="5E6-Lo-hHz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Y8s-9p-YGu" customClass="ASValueTrackingSlider">
+                                                    <rect key="frame" x="13" y="41" width="294" height="31"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="UIe-sX-jrz"/>
+                                                    </constraints>
+                                                </slider>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="aAp-5j-ckM" firstAttribute="top" secondItem="IdP-GY-ZJ1" secondAttribute="top" constant="12" id="4uh-QC-vxU"/>
+                                                <constraint firstAttribute="trailing" secondItem="aAp-5j-ckM" secondAttribute="trailing" constant="15" id="NNw-jt-mOd"/>
+                                                <constraint firstItem="Y8s-9p-YGu" firstAttribute="top" secondItem="aAp-5j-ckM" secondAttribute="bottom" constant="8" id="SIf-5i-wLx"/>
+                                                <constraint firstAttribute="trailing" secondItem="Y8s-9p-YGu" secondAttribute="trailing" constant="15" id="X6d-Qt-Adu"/>
+                                                <constraint firstItem="Y8s-9p-YGu" firstAttribute="leading" secondItem="IdP-GY-ZJ1" secondAttribute="leading" constant="15" id="aaL-wq-xgh"/>
+                                                <constraint firstItem="aAp-5j-ckM" firstAttribute="leading" secondItem="IdP-GY-ZJ1" secondAttribute="leading" constant="15" id="jsx-Hb-54h"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelDisplayName" destination="aAp-5j-ckM" id="ElN-jc-1yQ"/>
+                                            <outlet property="slideItem" destination="Y8s-9p-YGu" id="qWW-0P-jNH"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
