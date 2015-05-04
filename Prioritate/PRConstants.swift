@@ -10,3 +10,5 @@ import Foundation
 
 let CELL_ITEM = "PRCellItem"
 let CELL_ITEM_EDITOR = "PRCellItemEditor"
+
+let NOTIFICATION_NEW_ITEM = "br.com.morbix.prioritate.new_item"

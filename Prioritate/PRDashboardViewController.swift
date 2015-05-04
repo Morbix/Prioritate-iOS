@@ -12,6 +12,8 @@ class PRDashboardViewController: UIViewController, UITableViewDelegate, UITableV
     
     var itensArray: [PFItem] = []
     
+    var needReload: Bool = true
+    
     @IBOutlet var table: UITableView!
     
     override func viewDidLoad() {
@@ -19,7 +21,14 @@ class PRDashboardViewController: UIViewController, UITableViewDelegate, UITableV
         // Do any additional setup after loading the view, typically from a nib.
                 
         PRDataManager.sharedInstance.createFakeData()
-        self.reloadAllData()
+        self.setUp()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if needReload {
+            needReload = false
+            self.reloadAllData()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -28,10 +37,19 @@ class PRDashboardViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     //MARK: - Methods
+    func setUp(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("notificationNewItem:"), name: NOTIFICATION_NEW_ITEM, object: nil)
+    }
+    
     func reloadAllData() {
         itensArray = []
         itensArray += PRDataManager.sharedInstance.itensArray
         table.reloadData()
+    }
+    
+    //MARK: - Notifications
+    func notificationNewItem(notification: NSNotification){
+        self.needReload = true
     }
     
     //MARK: - UITableViewDelegate and UITableViewDataSource

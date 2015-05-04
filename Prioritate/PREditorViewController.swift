@@ -14,13 +14,22 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
     var itensArray: [PFItem] = []
     var itemEditing: PFItem?
     
+    var needReload: Bool = true
+    
     @IBOutlet var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        self.reloadAllData()
+        self.setUp()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        if needReload {
+            needReload = false
+            self.reloadAllData()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -29,6 +38,10 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     //MARK: - Methods
+    func setUp(){
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("notificationNewItem:"), name: NOTIFICATION_NEW_ITEM, object: nil)
+    }
+    
     func reloadAllData() {
         itensArray = []
         itensArray += PRDataManager.sharedInstance.itensArray
@@ -40,8 +53,7 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
             item.name = title
         }else{
             let item: PFItem = PFItem(name: title)
-            PRDataManager.sharedInstance.itensArray.append(item)
-            reloadAllData()
+            PRDataManager.sharedInstance.addNewItem(item)
         }
     }
     
@@ -58,6 +70,11 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
     //MARK: - Actions
     @IBAction func barButtonAddTouched(sender: AnyObject) {
         showNewItemAlert()
+    }
+    
+    //MARK: - Notifications
+    func notificationNewItem(notification: NSNotification){
+        self.needReload = true
     }
     
     //MARK: - UITableViewDelegate and UITableViewDataSource

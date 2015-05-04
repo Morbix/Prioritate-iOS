@@ -31,4 +31,10 @@ class PRDataManager {
         itensArray.append(PFItem(name: "Fogão", progress: 0.1))
         itensArray.append(PFItem(name: "Tênis"))
     }
+    
+    func addNewItem(newItem: PFItem){
+        self.itensArray.append(newItem)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(NOTIFICATION_NEW_ITEM, object: nil)
+    }
 }
