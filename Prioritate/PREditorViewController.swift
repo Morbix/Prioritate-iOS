@@ -9,9 +9,10 @@
 import UIKit
 
 
-class PREditorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PREditorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
     
     var itensArray: [PFItem] = []
+    var itemEditing: PFItem?
     
     @IBOutlet var table: UITableView!
     
@@ -32,6 +33,31 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
         itensArray = []
         itensArray += PRDataManager.sharedInstance.itensArray
         table.reloadData()
+    }
+    
+    func editCurrentItemWith(title: String){
+        if let item: PFItem = itemEditing {
+            item.name = title
+        }else{
+            let item: PFItem = PFItem(name: title)
+            PRDataManager.sharedInstance.itensArray.append(item)
+            reloadAllData()
+        }
+    }
+    
+    func showNewItemAlert(){
+        let alertView = UIAlertView(title: "New Item",
+            message: "Enter the title of this new item",
+            delegate: self,
+            cancelButtonTitle: "Cancel",
+            otherButtonTitles: "Save")
+        alertView.alertViewStyle = .PlainTextInput
+        alertView.show()
+    }
+    
+    //MARK: - Actions
+    @IBAction func barButtonAddTouched(sender: AnyObject) {
+        showNewItemAlert()
     }
     
     //MARK: - UITableViewDelegate and UITableViewDataSource
@@ -58,5 +84,23 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
+    }
+    
+    //MARK: - UIAlertViewDelegate
+    func alertViewShouldEnableFirstOtherButton(alertView: UIAlertView) -> Bool {
+        if alertView.alertViewStyle == UIAlertViewStyle.PlainTextInput {
+            let textField = alertView.textFieldAtIndex(0)!
+            return !textField.text.isEmpty
+        }
+        
+        return true
+    }
+    
+    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+        if buttonIndex == 1 && alertView.alertViewStyle == UIAlertViewStyle.PlainTextInput {
+            let textField = alertView.textFieldAtIndex(0)!
+            
+            editCurrentItemWith(textField.text)
+        }
     }
 }
