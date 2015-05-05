@@ -78,8 +78,14 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
             textFieldsConfigurationHandler: { (textFields: [AnyObject]!) -> Void in
                 self.textFieldNewItemTitle = textFields.first as? UITextField
                 self.textFieldNewItemPrice = textFields.last as? UITextField
-            }) { ([AnyObject]!) -> Bool in
-                return true
+                
+                self.textFieldNewItemTitle!.placeholder = "Title (e.g. Bike)"
+                self.textFieldNewItemPrice!.placeholder = "Price (e.g. 299,00)"
+                self.textFieldNewItemPrice!.keyboardType = UIKeyboardType.DecimalPad
+            }) { (textFields: [AnyObject]!) -> Bool in
+                let price: Float? = self.textFieldNewItemPrice!.text.floatValue
+                
+                return ((!self.textFieldNewItemTitle!.text.isEmpty) && (price != nil) && (price > 0))
         }
     }
     
