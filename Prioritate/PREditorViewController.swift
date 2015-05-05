@@ -9,10 +9,12 @@
 import UIKit
 
 
-class PREditorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIAlertViewDelegate {
+class PREditorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var itensArray: [PFItem] = []
     var itemEditing: PFItem?
+    var textFieldNewItemTitle: UITextField?
+    var textFieldNewItemPrice: UITextField?
     
     var needReload: Bool = true
     
@@ -48,7 +50,7 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
         table.reloadData()
     }
     
-    func editCurrentItemWith(title: String){
+    func editCurrentItemWith(title: String, price:String){
         if let item: PFItem = itemEditing {
             item.name = title
         }else{
@@ -57,14 +59,28 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func showNewItemAlert(){        
-        let alertView = UIAlertView(title: "New Item",
-            message: "Enter the title of this new item",
-            delegate: self,
-            cancelButtonTitle: "Cancel",
-            otherButtonTitles: "Save")
-        alertView.alertViewStyle = .PlainTextInput
-        alertView.show()
+    func showNewItemAlert(){
+        
+        let cancelAction = DAAlertAction(title: "Cancel",
+            style: DAAlertActionStyle.Cancel,
+            handler: nil)
+        
+        let saveAction = DAAlertAction(title: "Save",
+            style: DAAlertActionStyle.Default) { () -> Void in
+                self.editCurrentItemWith(self.textFieldNewItemTitle!.text, price: self.textFieldNewItemPrice!.text)
+        }
+        
+        DAAlertController.showAlertViewInViewController(self,
+            withTitle: "New Item",
+            message: "Enter the item informations",
+            actions: [cancelAction, saveAction],
+            numberOfTextFields: 2,
+            textFieldsConfigurationHandler: { (textFields: [AnyObject]!) -> Void in
+                self.textFieldNewItemTitle = textFields.first as? UITextField
+                self.textFieldNewItemPrice = textFields.last as? UITextField
+            }) { ([AnyObject]!) -> Bool in
+                return true
+        }
     }
     
     //MARK: - Actions
@@ -101,23 +117,5 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
-    }
-    
-    //MARK: - UIAlertViewDelegate
-    func alertViewShouldEnableFirstOtherButton(alertView: UIAlertView) -> Bool {
-        if alertView.alertViewStyle == UIAlertViewStyle.PlainTextInput {
-            let textField = alertView.textFieldAtIndex(0)!
-            return !textField.text.isEmpty
-        }
-        
-        return true
-    }
-    
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
-        if buttonIndex == 1 && alertView.alertViewStyle == UIAlertViewStyle.PlainTextInput {
-            let textField = alertView.textFieldAtIndex(0)!
-            
-            editCurrentItemWith(textField.text)
-        }
     }
 }
