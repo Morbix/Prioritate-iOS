@@ -18,6 +18,12 @@
 #define COCOAPODS_VERSION_MINOR_Bolts_Tasks 1
 #define COCOAPODS_VERSION_PATCH_Bolts_Tasks 5
 
+// DAAlertController
+#define COCOAPODS_POD_AVAILABLE_DAAlertController
+#define COCOAPODS_VERSION_MAJOR_DAAlertController 0
+#define COCOAPODS_VERSION_MINOR_DAAlertController 1
+#define COCOAPODS_VERSION_PATCH_DAAlertController 4
+
 // LDProgressView
 #define COCOAPODS_POD_AVAILABLE_LDProgressView
 #define COCOAPODS_VERSION_MAJOR_LDProgressView 1

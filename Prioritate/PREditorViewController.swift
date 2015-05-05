@@ -57,7 +57,7 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
-    func showNewItemAlert(){
+    func showNewItemAlert(){        
         let alertView = UIAlertView(title: "New Item",
             message: "Enter the title of this new item",
             delegate: self,

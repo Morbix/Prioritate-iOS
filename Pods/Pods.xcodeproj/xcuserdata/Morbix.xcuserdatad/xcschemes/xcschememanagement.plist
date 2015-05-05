@@ -4,12 +4,22 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>DAAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Prioritate-ASValueTrackingSlider.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Pods-Prioritate-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-Prioritate-DAAlertController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -39,6 +49,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-PrioritateTests-DAAlertController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PrioritateTests-LDProgressView.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,52 +72,67 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>04AF24C9583C4B77C66C9D5F</key>
+		<key>068B1841A4704CE4607DA693</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1D23D61848BA650B601B63D0</key>
+		<key>083D4CD0317B8EA941808F41</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>333FB7C781270118B41F87CB</key>
+		<key>2568E6D3945B6D10CE505340</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>37F40B4EA3E6839C4209A367</key>
+		<key>2611233952173F8ACA38E926</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4DCFA05D9176C83CF21020AD</key>
+		<key>84A7551645C015D3AB719EA1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A69AD0E38165726BE0DA0AD</key>
+		<key>9279905BB4790C6939E0EA9D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ACBB4D8C96E57A5E1139CC3F</key>
+		<key>AA0D982A53AB3C5EFF6919A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B5C0FB51CB91D787DB057370</key>
+		<key>AC3DC068236C033DC0336515</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B7ABA765B155DE1DDC223ED9</key>
+		<key>BD6C8E0905DFAC9A0D2382DD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB902192C157298D42CA9038</key>
+		<key>C4766F83596864170718E9F2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C5F62E4140A30AD0DB5A1290</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DCA86414387A6A3201414C18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E9409A14882CFABFBE856416</key>
 		<dict>
 			<key>primary</key>
 			<true/>
