@@ -54,7 +54,7 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
         if let item: PFItem = itemEditing {
             item.name = title
         }else{
-            let item: PFItem = PFItem(name: title)
+            let item: PFItem = PFItem(name: title, price: price.floatValue)
             PRDataManager.sharedInstance.addNewItem(item)
         }
     }

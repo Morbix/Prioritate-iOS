@@ -14,6 +14,7 @@ class PFItem: PFObject, PFSubclassing {
     dynamic var isCompleted: Bool = false
     dynamic var isBought: Bool = false
     dynamic var progress: Float = 0.0
+    dynamic var price: Float = 0.0
     
     override class func initialize() {
         struct Static {
@@ -38,6 +39,7 @@ class PFItem: PFObject, PFSubclassing {
         self.isCompleted = false
         self.isBought = false
         self.progress = 0.0
+        self.price = 0.0
     }
     
     convenience init(name: String, progress: Float) {
@@ -46,6 +48,16 @@ class PFItem: PFObject, PFSubclassing {
         self.isCompleted = false
         self.isBought = false
         self.progress = progress
+        self.price = 0.0
+    }
+    
+    convenience init(name: String, price: Float) {
+        self.init()
+        self.name = name
+        self.isCompleted = false
+        self.isBought = false
+        self.progress = 0.0
+        self.price = price
     }
     
     override var description: String {
