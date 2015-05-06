@@ -7,3 +7,4 @@
 #import <LDProgressView/LDProgressView.h>
 #import <ASValueTrackingSlider/ASValueTrackingSlider.h>
 #import <DAAlertController/DAAlertController.h>
+#import <TSCurrencyTextField/TSCurrencyTextField.h>

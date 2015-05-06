@@ -1,6 +1,6 @@
 #include "Pods-PrioritateTests-Parse.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/Parse" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ASValueTrackingSlider" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/DAAlertController" "${PODS_ROOT}/Headers/Public/LDProgressView" "${PODS_ROOT}/Headers/Public/Parse"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/Parse" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ASValueTrackingSlider" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/DAAlertController" "${PODS_ROOT}/Headers/Public/LDProgressView" "${PODS_ROOT}/Headers/Public/Parse" "${PODS_ROOT}/Headers/Public/TSCurrencyTextField"
 LIBRARY_SEARCH_PATHS = ${PODS_PRIORITATETESTS_PARSE_LIBRARY_SEARCH_PATHS}
 OTHER_LDFLAGS = ${PODS_PRIORITATETESTS_PARSE_OTHER_LDFLAGS} -ObjC
 PODS_ROOT = ${SRCROOT}

@@ -15,6 +15,8 @@
 		A7CF817D1AF6D57700225BD8 /* PRConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF817C1AF6D57700225BD8 /* PRConstants.swift */; };
 		A7CF817F1AF6DC6C00225BD8 /* PRTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF817E1AF6DC6C00225BD8 /* PRTabBarController.swift */; };
 		A7CF81811AF8DAF100225BD8 /* PRExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF81801AF8DAF100225BD8 /* PRExtensions.swift */; };
+		A7CF81831AFAD9A000225BD8 /* PRItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CF81821AFAD9A000225BD8 /* PRItemDetailViewController.swift */; };
+		A7CF81851AFAD9C700225BD8 /* ItemDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7CF81841AFAD9C700225BD8 /* ItemDetail.storyboard */; };
 		A7D794661AF5892700AE7D87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D794651AF5892700AE7D87 /* AppDelegate.swift */; };
 		A7D7946B1AF5892700AE7D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7D794691AF5892700AE7D87 /* Main.storyboard */; };
 		A7D7946D1AF5892700AE7D87 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7D7946C1AF5892700AE7D87 /* Images.xcassets */; };
@@ -51,6 +53,8 @@
 		A7CF817C1AF6D57700225BD8 /* PRConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRConstants.swift; sourceTree = "<group>"; };
 		A7CF817E1AF6DC6C00225BD8 /* PRTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRTabBarController.swift; sourceTree = "<group>"; };
 		A7CF81801AF8DAF100225BD8 /* PRExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRExtensions.swift; sourceTree = "<group>"; };
+		A7CF81821AFAD9A000225BD8 /* PRItemDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PRItemDetailViewController.swift; sourceTree = "<group>"; };
+		A7CF81841AFAD9C700225BD8 /* ItemDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ItemDetail.storyboard; sourceTree = "<group>"; };
 		A7D794601AF5892700AE7D87 /* Prioritate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prioritate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7D794641AF5892700AE7D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A7D794651AF5892700AE7D87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 			children = (
 				A7D794651AF5892700AE7D87 /* AppDelegate.swift */,
 				A7D794691AF5892700AE7D87 /* Main.storyboard */,
+				A7CF81841AFAD9C700225BD8 /* ItemDetail.storyboard */,
 				A7D7946C1AF5892700AE7D87 /* Images.xcassets */,
 				A7CF81731AF634C800225BD8 /* Classes */,
 				A7D794971AF5BF2D00AE7D87 /* Custom Views */,
@@ -186,6 +191,7 @@
 				A7CF81781AF6CF9C00225BD8 /* PRDashboardViewController.swift */,
 				A7CF817A1AF6D03400225BD8 /* PREditorViewController.swift */,
 				A7CF817E1AF6DC6C00225BD8 /* PRTabBarController.swift */,
+				A7CF81821AFAD9A000225BD8 /* PRItemDetailViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -307,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7D7946B1AF5892700AE7D87 /* Main.storyboard in Resources */,
+				A7CF81851AFAD9C700225BD8 /* ItemDetail.storyboard in Resources */,
 				A7D7946D1AF5892700AE7D87 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -395,6 +402,7 @@
 				A7CF81771AF6CE8000225BD8 /* PRCellItemEditor.swift in Sources */,
 				A7D794921AF5BD8100AE7D87 /* MXCellProtocol.swift in Sources */,
 				A7D794661AF5892700AE7D87 /* AppDelegate.swift in Sources */,
+				A7CF81831AFAD9A000225BD8 /* PRItemDetailViewController.swift in Sources */,
 				A7CF81811AF8DAF100225BD8 /* PRExtensions.swift in Sources */,
 				A7D794951AF5BEAF00AE7D87 /* PRCellItem.swift in Sources */,
 				A7D794861AF58BF600AE7D87 /* PrioritateKeys.swift in Sources */,

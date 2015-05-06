@@ -1,0 +1,5 @@
+#include "Pods-PrioritateTests-TSCurrencyTextField.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Build" "${PODS_ROOT}/Headers/Build/TSCurrencyTextField" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ASValueTrackingSlider" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/DAAlertController" "${PODS_ROOT}/Headers/Public/LDProgressView" "${PODS_ROOT}/Headers/Public/Parse" "${PODS_ROOT}/Headers/Public/TSCurrencyTextField"
+OTHER_LDFLAGS = -ObjC
+PODS_ROOT = ${SRCROOT}

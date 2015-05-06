@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-Prioritate-TSCurrencyTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-Prioritate.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -64,6 +69,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-PrioritateTests-TSCurrencyTextField.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-PrioritateTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -72,67 +82,77 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>068B1841A4704CE4607DA693</key>
+		<key>04B3B7296703753BF53D56F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>083D4CD0317B8EA941808F41</key>
+		<key>0A16FBF396843297419B92E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2568E6D3945B6D10CE505340</key>
+		<key>14EEF59D1600C4291588247A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2611233952173F8ACA38E926</key>
+		<key>20C477498894A2D288E977B5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>84A7551645C015D3AB719EA1</key>
+		<key>473FBAF817598751F691D937</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9279905BB4790C6939E0EA9D</key>
+		<key>51039BCEB8D1E96DE4DEC5CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AA0D982A53AB3C5EFF6919A8</key>
+		<key>64A0E8E095FA5321880090F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AC3DC068236C033DC0336515</key>
+		<key>6CE3D401B40A4F118B6AFD8F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BD6C8E0905DFAC9A0D2382DD</key>
+		<key>8D5B2A4712B71F50DEBF338F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4766F83596864170718E9F2</key>
+		<key>91BAB848AAD56D37E9617EA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C5F62E4140A30AD0DB5A1290</key>
+		<key>92F239A8C51EBF38772B04F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DCA86414387A6A3201414C18</key>
+		<key>C7B865F284A0FFB48D4C47C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9409A14882CFABFBE856416</key>
+		<key>DF66AF88A9A8030F4C03629E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F13FCE994BE4895FBD163086</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FF00BF83823FE326F50B995E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

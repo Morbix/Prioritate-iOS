@@ -58,40 +58,10 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
             PRDataManager.sharedInstance.addNewItem(item)
         }
     }
-    
-    func showNewItemAlert(){
-        
-        let cancelAction = DAAlertAction(title: "Cancel",
-            style: DAAlertActionStyle.Cancel,
-            handler: nil)
-        
-        let saveAction = DAAlertAction(title: "Save",
-            style: DAAlertActionStyle.Default) { () -> Void in
-                self.editCurrentItemWith(self.textFieldNewItemTitle!.text, price: self.textFieldNewItemPrice!.text)
-        }
-        
-        DAAlertController.showAlertViewInViewController(self,
-            withTitle: "New Item",
-            message: "Enter the item informations",
-            actions: [cancelAction, saveAction],
-            numberOfTextFields: 2,
-            textFieldsConfigurationHandler: { (textFields: [AnyObject]!) -> Void in
-                self.textFieldNewItemTitle = textFields.first as? UITextField
-                self.textFieldNewItemPrice = textFields.last as? UITextField
-                
-                self.textFieldNewItemTitle!.placeholder = "Title (e.g. Bike)"
-                self.textFieldNewItemPrice!.placeholder = "Price (e.g. 299,00)"
-                self.textFieldNewItemPrice!.keyboardType = UIKeyboardType.DecimalPad
-            }) { (textFields: [AnyObject]!) -> Bool in
-                let price: Float? = self.textFieldNewItemPrice!.text.floatValue
-                
-                return ((!self.textFieldNewItemTitle!.text.isEmpty) && (price != nil) && (price > 0))
-        }
-    }
-    
+
     //MARK: - Actions
     @IBAction func barButtonAddTouched(sender: AnyObject) {
-        showNewItemAlert()
+        self.presentViewController(PRItemDetailViewController.getInstance(), animated: true, completion: nil)
     }
     
     //MARK: - Notifications
