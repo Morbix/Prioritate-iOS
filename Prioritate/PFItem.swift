@@ -69,6 +69,6 @@ class PFItem: PFObject, PFSubclassing {
     }
     
     func getDisplayNameAndPrice() -> String {
-        return self.name + " ($)"
+        return self.name + " ($)" + self.price.currencyFormat
     }
 }
