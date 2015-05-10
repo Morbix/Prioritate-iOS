@@ -18,4 +18,15 @@ extension Float {
     var numberValue: NSNumber {
         return NSNumber(float: self)
     }
+    
+    var percentFormat: String {
+        var percent: String = NSString(format: "%.2%%", self*100) as String
+        return percent
+    }
+    
+    var currencyFormat: String {
+        var currency: String = NSString(format: "$%.2", self) as String
+        return currency
+    }
 }
+
