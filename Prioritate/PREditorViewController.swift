@@ -11,7 +11,7 @@ import UIKit
 
 class PREditorViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var itensArray: [PFItem] = []
+    var itemsArray: [PFItem] = []
     var itemEditing: PFItem?
     var textFieldNewItemTitle: UITextField?
     var textFieldNewItemPrice: UITextField?
@@ -45,23 +45,19 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func reloadAllData() {
-        itensArray = []
-        itensArray += PRDataManager.sharedInstance.itensArray
+        itemsArray = []
+        itemsArray += PRDataManager.sharedInstance.itemsArray
         table.reloadData()
     }
     
-    func editCurrentItemWith(title: String, price:String){
-        if let item: PFItem = itemEditing {
-            item.name = title
-        }else{
-            let item: PFItem = PFItem(name: title, price: price.floatValue)
-            PRDataManager.sharedInstance.addNewItem(item)
-        }
+    func presentItemDetail() {
+        self.presentViewController(PRItemDetailViewController.getInstance(), animated: true, completion: nil)
     }
-
+    
     //MARK: - Actions
     @IBAction func barButtonAddTouched(sender: AnyObject) {
-        self.presentViewController(PRItemDetailViewController.getInstance(), animated: true, completion: nil)
+        PRDataManager.sharedInstance.selectedItem = nil
+        self.presentItemDetail()
     }
     
     //MARK: - Notifications
@@ -71,7 +67,7 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
     
     //MARK: - UITableViewDelegate and UITableViewDataSource
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itensArray.count;
+        return itemsArray.count;
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -79,7 +75,7 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
         var identifier: String = CELL_ITEM_EDITOR
         var object: AnyObject?
         
-        object = itensArray[indexPath.row]
+        object = itemsArray[indexPath.row]
         
         var cell: UITableViewCell = tableView.dequeueReusableCellWithIdentifier(identifier,
             forIndexPath: indexPath) as! UITableViewCell
@@ -93,5 +89,14 @@ class PREditorViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 80
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        var object: PFItem = itemsArray[indexPath.row]
+        PRDataManager.sharedInstance.selectedItem = object
+        self.presentItemDetail()
     }
 }

@@ -13,3 +13,9 @@ extension String {
         return (self as NSString).floatValue
     }
 }
+
+extension Float {
+    var numberValue: NSNumber {
+        return NSNumber(float: self)
+    }
+}

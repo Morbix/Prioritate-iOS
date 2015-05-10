@@ -43,7 +43,7 @@ class PRDashboardViewController: UIViewController, UITableViewDelegate, UITableV
     
     func reloadAllData() {
         itensArray = []
-        itensArray += PRDataManager.sharedInstance.itensArray
+        itensArray += PRDataManager.sharedInstance.itemsArray
         table.reloadData()
     }
     

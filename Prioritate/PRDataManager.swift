@@ -10,7 +10,9 @@ import Foundation
 
 class PRDataManager {
     
-    var itensArray = [PFItem]()
+    var itemsArray = [PFItem]()
+    var selectedItem: PFItem?
+
     
     class var sharedInstance: PRDataManager {
         struct Static {
@@ -26,15 +28,9 @@ class PRDataManager {
     }
     
     func createFakeData() {
-        itensArray.append(PFItem(name: "Bike", progress: 0.5))
-        itensArray.append(PFItem(name: "Play 4", progress: 0.3))
-        itensArray.append(PFItem(name: "Fogão", progress: 0.1))
-        itensArray.append(PFItem(name: "Tênis"))
-    }
-    
-    func addNewItem(newItem: PFItem){
-        self.itensArray.append(newItem)
-        
-        NSNotificationCenter.defaultCenter().postNotificationName(NOTIFICATION_NEW_ITEM, object: nil)
+        itemsArray.append(PFItem(name: "Bike", progress: 0.5))
+        itemsArray.append(PFItem(name: "Play 4", progress: 0.3))
+        itemsArray.append(PFItem(name: "Fogão", progress: 0.1))
+        itemsArray.append(PFItem(name: "Tênis"))
     }
 }

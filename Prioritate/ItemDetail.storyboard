@@ -96,6 +96,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="textFieldName" destination="ZB9-6I-5iT" id="c7B-UK-Loi"/>
+                        <outlet property="textFieldPrice" destination="ekl-wu-V09" id="KpF-6Z-bUk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syu-tn-veW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
