@@ -15,11 +15,13 @@ class PRTabBarController: UITabBarController {
         if let items = self.tabBar.items {
             let item = items[0] as? UITabBarItem
             item!.title = "Dashboard"
+            item!.image = UIImage(named: "amount")
         }
         
         if let items = self.tabBar.items {
             let item = items[1] as? UITabBarItem
             item!.title = "Priorities"
+            item!.image = UIImage(named: "sliders")
         }
     }
 }
